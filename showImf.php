@@ -15,24 +15,14 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	} 
-	$sql = "SELECT * FROM account";
+	$sql = "SELECT * FROM `account` WHERE name ='$ac' && password = '$pss';";
 	$result = $conn->query($sql);
-
-	$check = false;
-	if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			if($row["name"] == $ac && $row["password"] == $pss)
-				$check=true;
-		}
-	} else {
-		echo "Xin kiểm tra lại cơ sở dữ liệu";
-	}
 	
-	if($check == true)
+	if ($result->num_rows == 0) {
+		echo "user not found";
+	} else {
 		echo "<h4>Xin Chao :</h4>".$ac;
-	else
-		echo "User not found";
+	}
 	$conn->close();
 ?>
 </body>

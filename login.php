@@ -16,33 +16,4 @@
 			<button type="submit" class="col-md-3 btn btn-primary" style="margin-left: 30px; margin-bottom: 20px" >Đăng Nhập</button>
 		</form>
 	</div>
-	<?php
-		function login(){
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "qlnhanvien";
-
-			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
-			// Check connection
-			if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-			} 
-			$sql = "SELECT * FROM person";
-			$result = $conn->query($sql);
-
-			echo '<h1>Hello A.N.L.A.B</h1>';
-			if ($result->num_rows > 0) {
-				// output data of each row
-				echo "MaNV:________Name:________Adress:________PhoneNumber</br>";
-				while($row = $result->fetch_assoc()) {
-					echo $row["maNV"]. "_____________".$row["nameNV"]. "_________".$row["adrress"]. "______".$row["phoneNumber"]. "<br>";
-				}
-			} else {
-				echo "0 results";
-			}
-			$conn->close();
-		}
-	?>
 </html>
