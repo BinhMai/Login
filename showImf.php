@@ -1,16 +1,9 @@
-<?php
-	$cookie_name = $_COOKIE["acc"]; 
-	$cookie_pass = $_COOKIE["pass"]; 
-?>
 <html>
 <body>
 <?php 
-
 	if(isset($_POST["acc"])) {
 		$cookie_name = $_POST["acc"]; 
-		setcookie('acc', $cookie_name, time() + (86400 * 3), "/");
 		$cookie_pass = $_POST["pass"]; 
-		setcookie('pass',$cookie_pass, time() + (86400 * 3), "/");
 		
 		$servername = "localhost";
 		$username = "root";
@@ -30,9 +23,13 @@
 			echo "user not found";
 		} else {
 			echo "<h4>Xin Chao :</h4>".$cookie_name;
+			setcookie('acc', $cookie_name, time() + (86400 * 3), "/");
+			setcookie('pass',$cookie_pass, time() + (86400 * 3), "/");
 		}
 		$conn->close();
 	}else{
+		$cookie_name = $_COOKIE["acc"]; 
+		$cookie_pass = $_COOKIE["pass"]; 
 		echo "<h4>Xin Chao :</h4>".$cookie_name;
 	}
 ?>
