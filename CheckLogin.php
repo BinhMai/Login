@@ -1,7 +1,7 @@
 <?php 
-	if(isset($_POST['nameAcc'])){
-		$name = $_POST['nameAcc'];
-		$pass = $_POST["pass"]; 
+	if(isset($_POST['acclogin'])){
+		$name = $_POST['acclogin'];
+		$pass = $_POST["passlogin"]; 
 		
 		$servername = "localhost";
 		$username = "root";
@@ -14,15 +14,15 @@
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
-		$sql = "SELECT * FROM `account` WHERE name ='$name';";
+		$sql = "SELECT * FROM `account` WHERE name ='$name'&& password='$pass';";
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0){
-			echo "already";
+		if ($result->num_rows == 0){
+			echo "failed";
 		}else{
 			echo "success";
 			setcookie('acc', $name, time() + (86400 * 3), "/");
-			$conn->query("INSERT INTO `account` (`id`, `name`, `password`) VALUES (NULL, '$name','$pass');");
+			setcookie('pass', $pass, time() + (86400 * 3), "/");
 		}
 		$conn->close();
 	}
