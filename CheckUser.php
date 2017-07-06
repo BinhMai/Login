@@ -22,6 +22,7 @@
 		}else{
 			echo "success";
 			setcookie('acc', $name, time() + (86400 * 3), "/");
+			setcookie('pass', $pass, time() + (86400 * 3), "/");
 			$conn->query("INSERT INTO `account` (`id`, `name`, `password`) VALUES (NULL, '$name','$pass');");
 		}
 		$conn->close();

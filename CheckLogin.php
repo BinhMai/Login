@@ -21,7 +21,7 @@
 			echo "failed";
 		}else{
 			echo "success";
-			setcookie('acc', $name, time() + (86400 * 3), "/");
+			setcookie('acc', '"'.$name.'"', time() + (86400 * 3), "/");
 			setcookie('pass', $pass, time() + (86400 * 3), "/");
 		}
 		$conn->close();

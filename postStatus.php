@@ -1,5 +1,5 @@
 <?php 
-	$content = $_POST['contentStt'];
+	$content=$_POST['contentStt'];
 	$user = $_COOKIE['acc'];
 	
 	$servername = "localhost";

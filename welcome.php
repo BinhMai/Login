@@ -10,6 +10,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js" type="text/javascript"></script>
+
 <script type="text/javascript" >
 $(document).ready(function() {	
 	jQuery.validator.setDefaults({
@@ -34,9 +35,6 @@ $(document).ready(function() {
 			}		
 		},
 		messages: {
-			//nameAcc:{
-				//errorUser: "Tài khoản đã tồn tại"
-			//},
 			pass: {
 				minlength: "Mật Khẩu phải dài hơn 6 kí tự"
 			},
@@ -61,7 +59,7 @@ $(document).ready(function() {
                         $("#error").html('<div class="alert alert-danger text-left"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Tài Khoản Này Đã Tồn Tại !</div>');
                     });
                 }else{
-					window.location="http://localhost/abc/TrangChu.php";
+					window.location="http://binhmai.com/TrangChu.php";
                 }
             }
         });
@@ -94,7 +92,7 @@ $(document).ready(function() {
                         $("#errorLogin").html('<div class="alert alert-danger text-left"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Tên tài khoản hoặc mật khẩu không chính xác !</div>');
                     });
                 }else{
-					window.location="http://localhost/web/TrangChu.php";
+					window.location="http://binhmai.com/TrangChu.php";
                 }
             }
         });
@@ -123,7 +121,7 @@ $(document).ready(function() {
 	}
 </style> 
 
-<body background="http://localhost/img/go.jpg">
+<body background="http://binhmai.com/img/go.jpg">
 	<div class="col-md-12" style="margin-top: 50px;">
 		<div class="col-md-11">
 		<!--action="SignUp.php"
