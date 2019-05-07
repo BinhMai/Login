@@ -11,7 +11,7 @@
 </script>
 
 <script type="text/javascript">
-	window.location = '<?php echo "http://binhmai.com/search.php?search=".'"'.$_POST['search'].'"'?>';
+	//window.location = '<?php //echo "http://binhmai.com/search.php?search=".'"'.$_POST['search'].'"'?>//';
 </script>
 
 <div class="col-md-1" style="padding-right: 0px">

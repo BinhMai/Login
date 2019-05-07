@@ -59,7 +59,7 @@ $(document).ready(function() {
                         $("#error").html('<div class="alert alert-danger text-left"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Tài Khoản Này Đã Tồn Tại !</div>');
                     });
                 }else{
-					window.location="http://binhmai.com/TrangChu.php";
+					window.location="http://binhmai.com/trangchu.php";
                 }
             }
         });
@@ -92,7 +92,7 @@ $(document).ready(function() {
                         $("#errorLogin").html('<div class="alert alert-danger text-left"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Tên tài khoản hoặc mật khẩu không chính xác !</div>');
                     });
                 }else{
-					window.location="http://binhmai.com/TrangChu.php";
+					window.location="http://binhmai.com/trangchu.php";
                 }
             }
         });
